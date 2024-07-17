@@ -89,141 +89,151 @@ export const Compositions: React.FC<Props> = ({ compositions, elements }) => {
                 <div className="flex flex-row">
                   <div>
                     <p>Level4</p>
-                    {element[1].EarlyData['4'].map((data) => {
-                      const units = clearString(data[1].Unidades)
-                        .split(' ')
-                        .map((a, index) => {
-                          const found = elements.some((b) => a === b[0]);
-                          return (
-                            <span
-                              className={found ? 'text-green-500' : 'text-red-500'}
-                              key={index}
-                            >
-                              {a}{' '}
-                            </span>
-                          );
-                        });
+                    {element[1].EarlyData['4'].map(
+                      (data: { avg: { toString: () => string } }[]) => {
+                        const units = clearString(data[1].Unidades)
+                          .split(' ')
+                          .map((a, index) => {
+                            const found = elements.some((b) => a === b[0]);
+                            return (
+                              <span
+                                className={found ? 'text-green-500' : 'text-red-500'}
+                                key={index}
+                              >
+                                {a}{' '}
+                              </span>
+                            );
+                          });
 
-                      return (
-                        <div key={data[1].avg}>
-                          <p>
-                            {units} {/* Renderizamos todos los spans */}
-                            {data[1].avg.toString().substring(0, 4)}
-                          </p>
-                        </div>
-                      );
-                    })}
+                        return (
+                          <div key={data[1].avg}>
+                            <p>
+                              {units} {/* Renderizamos todos los spans */}
+                              {data[1].avg.toString().substring(0, 4)}
+                            </p>
+                          </div>
+                        );
+                      },
+                    )}
                   </div>
                   <div>
                     <p>Level5</p>
-                    {element[1].EarlyData['5'].map((data) => {
-                      const units = clearString(data[1].Unidades)
-                        .split(' ')
-                        .map((a, index) => {
-                          const found = elements.some((b) => a === b[0]);
-                          return (
-                            <span
-                              className={found ? 'text-green-500' : 'text-red-500'}
-                              key={index}
-                            >
-                              {a}{' '}
-                            </span>
-                          );
-                        });
+                    {element[1].EarlyData['5'].map(
+                      (data: { avg: { toString: () => string } }[]) => {
+                        const units = clearString(data[1].Unidades)
+                          .split(' ')
+                          .map((a, index) => {
+                            const found = elements.some((b) => a === b[0]);
+                            return (
+                              <span
+                                className={found ? 'text-green-500' : 'text-red-500'}
+                                key={index}
+                              >
+                                {a}{' '}
+                              </span>
+                            );
+                          });
 
-                      return (
-                        <div key={data[1].avg}>
-                          <p>
-                            {units} {/* Renderizamos todos los spans */}
-                            {data[1].avg.toString().substring(0, 4)}
-                          </p>
-                        </div>
-                      );
-                    })}
+                        return (
+                          <div key={data[1].avg}>
+                            <p>
+                              {units} {/* Renderizamos todos los spans */}
+                              {data[1].avg.toString().substring(0, 4)}
+                            </p>
+                          </div>
+                        );
+                      },
+                    )}
                   </div>
                   <div>
                     <p>Level6</p>
-                    {element[1].EarlyData['6'].map((data) => {
-                      const units = clearString(data[1].Unidades)
-                        .split(' ')
-                        .map((a, index) => {
-                          const found = elements.some((b) => a === b[0]);
-                          return (
-                            <span
-                              className={found ? 'text-green-500' : 'text-red-500'}
-                              key={index}
-                            >
-                              {a}{' '}
-                            </span>
-                          );
-                        });
+                    {element[1].EarlyData['6'].map(
+                      (data: { avg: { toString: () => string } }[]) => {
+                        const units = clearString(data[1].Unidades)
+                          .split(' ')
+                          .map((a, index) => {
+                            const found = elements.some((b) => a === b[0]);
+                            return (
+                              <span
+                                className={found ? 'text-green-500' : 'text-red-500'}
+                                key={index}
+                              >
+                                {a}{' '}
+                              </span>
+                            );
+                          });
 
-                      return (
-                        <div key={data[1].avg}>
-                          <p>
-                            {units} {/* Renderizamos todos los spans */}
-                            {data[1].avg.toString().substring(0, 4)}
-                          </p>
-                        </div>
-                      );
-                    })}
+                        return (
+                          <div key={data[1].avg}>
+                            <p>
+                              {units} {/* Renderizamos todos los spans */}
+                              {data[1].avg.toString().substring(0, 4)}
+                            </p>
+                          </div>
+                        );
+                      },
+                    )}
                   </div>
                   <div>
                     <p>Level7</p>
-                    {element[1].EarlyData['7'].map((data) => {
-                      const units = clearString(data[1].Unidades)
-                        .split(' ')
-                        .map((a, index) => {
-                          const found = elements.some((b) => a === b[0]);
-                          return (
-                            <span
-                              className={found ? 'text-green-500' : 'text-red-500'}
-                              key={index}
-                            >
-                              {a}{' '}
-                            </span>
-                          );
-                        });
+                    {element[1].EarlyData['7'].map(
+                      (data: { avg: { toString: () => string } }[]) => {
+                        const units = clearString(data[1].Unidades)
+                          .split(' ')
+                          .map((a, index) => {
+                            const found = elements.some((b) => a === b[0]);
+                            return (
+                              <span
+                                className={found ? 'text-green-500' : 'text-red-500'}
+                                key={index}
+                              >
+                                {a}{' '}
+                              </span>
+                            );
+                          });
 
-                      return (
-                        <div key={data[1].avg}>
-                          <p>
-                            {units} {/* Renderizamos todos los spans */}
-                            {data[1].avg.toString().substring(0, 4)}
-                          </p>
-                        </div>
-                      );
-                    })}
+                        return (
+                          <div key={data[1].avg}>
+                            <p>
+                              {units} {/* Renderizamos todos los spans */}
+                              {data[1].avg.toString().substring(0, 4)}
+                            </p>
+                          </div>
+                        );
+                      },
+                    )}
                   </div>
 
                   <div>
                     <p>Final Build</p>
-                    {element[1].LateData.map((data, index) => {
-                      const units = clearString(data[1].units_lists)
-                        .split(' ')
-                        .map((a, index) => {
-                          const found = elements.some((b) => a === b[0]);
-                          return (
-                            <span
-                              className={found ? 'text-green-500' : 'text-red-500'}
-                              key={index}
-                            >
-                              {a}{' '}
-                            </span>
-                          );
-                        });
+                    {element[1].LateData.map(
+                      (data: { avg: { toString: () => string } }[], index: number) => {
+                        const units = clearString(data[1].units_lists)
+                          .split(' ')
+                          .map((a, index) => {
+                            const found = elements.some((b) => a === b[0]);
+                            return (
+                              <span
+                                className={found ? 'text-green-500' : 'text-red-500'}
+                                key={index}
+                              >
+                                {a}{' '}
+                              </span>
+                            );
+                          });
 
-                      return (
-                        <div key={data[1].units_lists + data[1].avg}>
-                          {index < 10 && (
-                            <div>
-                              {units}
-                              <p>{data[1].avg.toString().substring(0, 4)}</p>
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
+                        return (
+                          <div key={data[1].units_lists + data[1].avg}>
+                            {index < 10 && (
+                              <div>
+                                {units}
+                                <p>{data[1].avg.toString().substring(0, 4)}</p>
+                              </div>
+                            )}
+                          </div>
+                        );
+                      },
+                    )}
                   </div>
                 </div>
               </div>
